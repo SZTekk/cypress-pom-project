@@ -7,7 +7,7 @@ Cypress.on('uncaught:exception', (err, runnable) => {
     return false
 })
 
-describe("validate user can perform search on AT&T main page", () =>{
+describe("validate user can perform search on Verizon main page", () =>{
     let testdata;
     before(function () {
         cy.visit(Cypress.env("url"))
@@ -16,7 +16,11 @@ describe("validate user can perform search on AT&T main page", () =>{
         })
     })
 
-    it("validate user can search a product ", async () => {
-        await searchPage.validateSearch(testdata.searchString, testdata.searchPageTitle, testdata.searchResultData)
+    it("validate user can search a product using ajax", async () => {
+        await searchPage.validateAjaxSearch(testdata.searchString, testdata.searchPageTitle, testdata.searchResultData)
+    })
+
+    it.only("validate user perform a detailed search of product ", async () => {
+        await searchPage.validateDetailedSearch(testdata.searchString, testdata.detailedSearchPageTitle, testdata.detailedSearchResultData)
     })
 })

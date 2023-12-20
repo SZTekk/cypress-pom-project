@@ -1,17 +1,24 @@
 export class SearchPage {
 
 elements = {
-    searchBar: () => cy.get('#z1-search-tablet'),
-    searchBarInput: () => cy.get('#z1-searchfield'),
-    searchBtn: () => cy.get('.gn-search-btn')
+    searchBar: () => cy.get('#gnav20-search-icon'),
+    searchBarInput: () => cy.get('#search_box_gnav_input'),
+    firstSearchResult: () => cy.get('a[class="buttonCurved"]')
 }
 
-    validateSearch = (searchString, pageTitle, searchResult) => {
+    validateAjaxSearch = (searchString, pageTitle, searchResult) => {
         this.elements.searchBar().click({force: true})
         this.elements.searchBarInput().type(searchString, {force: true})
-        this.elements.searchBtn().click({force: true})
         cy.title().should('eq', pageTitle);
         cy.contains(searchResult).should('exist');
+    }
+
+    validateDetailedSearch = (searchString, pageTitle, searchResult) => {
+        this.elements.searchBar().click({force: true})
+        this.elements.searchBarInput().type(searchString, {force: true})
+        this.elements.searchBarInput().type('{enter}', {force: true})
+        cy.title().should('eq', pageTitle);
+        this.elements.firstSearchResult().eq(0).click()
     }
 
     

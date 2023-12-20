@@ -25,7 +25,7 @@ module.exports = defineConfig({
     experimentalModifyObstructiveThirdPartyCode: true,
     chromeWebSecurity: false,
     env:{
-      url: "https://www.att.com/"
+      url: "https://www.verizon.com/"
     },
     requestTimeout: 10000,
     defaultCommandTimeout: 10000,
