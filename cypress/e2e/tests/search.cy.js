@@ -7,12 +7,16 @@ Cypress.on('uncaught:exception', (err, runnable) => {
     return false
 })
 
-describe("validate user can create a new account", () =>{
-    beforeEach("open main website url", () => {
+describe("validate user can perform search on AT&T main page", () =>{
+    let testdata;
+    before(function () {
         cy.visit(Cypress.env("url"))
+        cy.fixture('data.json').then((data) => {
+            testdata = data
+        })
     })
 
-    it("validate user can create account with valid credentials", () => {
-        searchPage.enterSearchQuery()
+    it("validate user can search a product ", async () => {
+        await searchPage.validateSearch(testdata.searchString, testdata.searchPageTitle, testdata.searchResultData)
     })
 })

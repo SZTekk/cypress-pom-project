@@ -4,12 +4,20 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "cypress run",
+    "open-report": "http-server cypress/mochawesomeresults -p 8080 && open http://localhost:8080",
+    "cy:run": "npm run test && npm run open-report"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "cypress": "^13.6.1"
+    "@badeball/cypress-cucumber-preprocessor": "^20.0.0",
+    "@cypress/browserify-preprocessor": "^3.0.2",
+    "cypress": "^13.6.1",
+    "cypress-mochawesome-reporter": "^3.7.0",
+    "http-server": "^14.1.1",
+    "opn": "^6.0.0",
+    "start-server-and-test": "^2.0.3"
   }
 }

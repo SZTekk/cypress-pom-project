@@ -23,3 +23,11 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+const origLog = Cypress.log;
+
+Cypress.log = function (opts, ...other) {
+  if (opts.displayName === 'script' || opts.name === 'request') {
+    return;
+  }
+  return origLog(opts, ...other);
+};
