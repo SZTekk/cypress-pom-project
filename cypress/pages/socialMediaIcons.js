@@ -1,3 +1,5 @@
+/* eslint-disable no-unused-vars */
+/* eslint-disable no-undef */
 export class SocialMediaIcons {
     elements = {
         followVerizonFooter: () => cy.get('[aria-label="Follow Verizon menu list"]'),

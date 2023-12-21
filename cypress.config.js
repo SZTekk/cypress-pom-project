@@ -9,6 +9,8 @@ async function setupNodeEvents(on, config) {
   return config;
 }
 
+/* eslint-disable no-unused-vars */
+/* eslint-disable no-undef */
 module.exports = defineConfig({
   reporter: 'cypress-mochawesome-reporter',
   reporterOptions: {
