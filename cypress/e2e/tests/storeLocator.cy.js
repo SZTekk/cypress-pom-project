@@ -16,7 +16,7 @@ describe("validate user can locate a store", () =>{
         })
     })
 
-    it.only("validate user can search for store using store locator", async () => {
+    it ("validate user can search for store using store locator", async () => {
         await storeLocatorPage.validateStoreLocator(testdata.storeSearch)
     })
 })

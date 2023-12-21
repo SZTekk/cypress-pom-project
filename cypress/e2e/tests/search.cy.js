@@ -20,7 +20,7 @@ describe("validate user can perform search on Verizon main page", () =>{
         await searchPage.validateAjaxSearch(testdata.searchString, testdata.searchPageTitle, testdata.searchResultData)
     })
 
-    it.only("validate user perform a detailed search of product ", async () => {
+    it("validate user perform a detailed search of product ", async () => {
         await searchPage.validateDetailedSearch(testdata.searchString, testdata.detailedSearchPageTitle, testdata.detailedSearchResultData)
     })
 })
