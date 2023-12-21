@@ -4,5 +4,9 @@
   "searchResultData": "Apple iPhone 15",
   "detailedSearchPageTitle": "Search Verizon",
   "detailedSearchResultData": "Available offers",
-  "searchStore": "Florida"
+  "searchStore": "Florida",
+  "minimumStorage": "128",
+  "newCustomer": "New customer",
+  "existingCustomer": "existing",
+  "fullpayOption": "$829.99 one time payment"
 }
