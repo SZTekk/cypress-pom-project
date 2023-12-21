@@ -1,3 +1,5 @@
+/* eslint-disable no-unused-vars */
+/* eslint-disable no-undef */
 export class StoreLocatorPage {
 
 elements = {
@@ -7,10 +9,9 @@ elements = {
     firstSearchResult: () => cy.get('a[class="buttonCurved"]')
 }
 
-    validateStoreLocator = (searchStore) => {
+    validateStoreLocator = () => {
         this.elements.toggleNavMenu().click({force: true})
         this.elements.storesButton().eq(1).click({force: true})
-        //this.elements.storeBarInput().click().type(searchStore, {force: true})
     }
 
     

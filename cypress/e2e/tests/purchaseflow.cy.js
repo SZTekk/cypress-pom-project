@@ -1,3 +1,5 @@
+/* eslint-disable no-unused-vars */
+/* eslint-disable no-undef */
 import { PurchaseFlowPage } from "../../pages/purchaseflow.page";
 const purchaseFlowPage = new PurchaseFlowPage;
 

@@ -1,3 +1,5 @@
+/* eslint-disable no-unused-vars */
+/* eslint-disable no-undef */
 import { SearchPage } from "../../pages/search.page";
 const searchPage = new SearchPage;
 

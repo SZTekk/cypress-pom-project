@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "lint": "eslint",
     "test": "cypress run",
     "open-report": "http-server cypress/mochawesomeresults -p 8080 && open http://localhost:8080",
     "cy:run": "npm run test && npm run open-report"
@@ -16,6 +17,8 @@
     "@cypress/browserify-preprocessor": "^3.0.2",
     "cypress": "^13.6.1",
     "cypress-mochawesome-reporter": "^3.7.0",
+    "eslint": "^8.56.0",
+    "eslint-plugin-react": "^7.33.2",
     "http-server": "^14.1.1",
     "opn": "^6.0.0",
     "start-server-and-test": "^2.0.3"

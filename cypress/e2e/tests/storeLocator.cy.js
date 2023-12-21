@@ -1,3 +1,5 @@
+/* eslint-disable no-unused-vars */
+/* eslint-disable no-undef */
 import { StoreLocatorPage } from "../../pages/storeLocator.page";
 const storeLocatorPage = new StoreLocatorPage;
 
