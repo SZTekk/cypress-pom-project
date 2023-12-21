@@ -20,7 +20,7 @@ describe("validate user can get support", () => {
 
     it("validate user can get home support by search", async () => {
         supportValidation.navigateToHomeSupportPage();
-        supportValidation.searchForString(testdata.searchSupportString)
-        supportValidation.validateCorrectSearchIsDisplayed(testdata.expectedSearchResult)
+        supportValidation.searchForString(testdata.searchSupportString);
+        supportValidation.validateCorrectSearchIsDisplayed(testdata.expectedSearchResult);
     });
 });
