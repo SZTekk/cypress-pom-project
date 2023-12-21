@@ -10,5 +10,9 @@
   "minimumStorage": "128",
   "newCustomer": "New customer",
   "existingCustomer": "existing",
-  "fullpayOption": "$829.99 one time payment"
+  "fullpayOption": "$829.99 one time payment",
+  "searchSupportString": "phone not working",
+  "expectedSearchResult": "Quick Cell Phone Repair"
+
+
 }

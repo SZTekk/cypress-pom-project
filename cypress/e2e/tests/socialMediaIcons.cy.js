@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable no-undef */
-import { SocialMediaIcons } from "../../pages/socialMediaIcons";
+import { SocialMediaIcons } from "../../pages/socialMediaIcons.page";
 const socialMediaIcons = new SocialMediaIcons();
 
 Cypress.on("uncaught:exception", (err, runnable) => {
@@ -19,6 +19,7 @@ describe("validate user can visit Verizon social media", () => {
     });
 
     it("validate user can visit different Verizon social media handles", async () => {
-        await socialMediaIcons.validateSocialMediaIcons();
+        socialMediaIcons.navigateToFooterSection();
+        socialMediaIcons.validateSocialMediaIcons();
     });
 });

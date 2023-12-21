@@ -9,8 +9,11 @@ export class SocialMediaIcons {
         instagramButton: () => cy.get('[aria-label="Follow Verizon on Instagram"]'),
     };
 
-    validateSocialMediaIcons = () => {
+    navigateToFooterSection = () => {
         this.elements.followVerizonFooter().scrollIntoView();
+    };
+
+    validateSocialMediaIcons = () => {
         this.elements.facebookButton().eq(0).should("have.attr", "href").and("include", "facebook.com");
         this.elements.twitterButton().eq(0).should("have.attr", "href").and("include", "twitter.com");
         this.elements.youtubeButton().eq(0).should("have.attr", "href").and("include", "youtube.com");
