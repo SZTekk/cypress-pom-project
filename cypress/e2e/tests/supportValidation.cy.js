@@ -23,4 +23,16 @@ describe("validate user can get support", () => {
         supportValidation.searchForString(testdata.searchSupportString);
         supportValidation.validateCorrectSearchIsDisplayed(testdata.expectedSearchResult);
     });
+
+    it("validate user can get business support by search", async () => {
+        supportValidation.navigateToBusinessSupportPage();
+        supportValidation.searchForBusinessString(testdata.searchBusinessSupportString);
+        supportValidation.validateCorrectSearchIsDisplayed(testdata.expectedBusinessSearchResult);
+    });
+
+    it.only("validate user can get mobile device troubleshoot support", async () => {
+        supportValidation.navigateToMobileDeviceSupportPage();
+        supportValidation.selectFirstDeviceTroubleShoot();
+        supportValidation.validateCorrectSearchIsDisplayed(testdata.expectedMobileDeviceTroubleshootSearchResult);
+    });
 });

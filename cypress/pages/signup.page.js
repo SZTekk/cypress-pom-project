@@ -8,10 +8,10 @@ export class SignUpPage {
     };
 
     openSignInDropdown = () => {
-        this.elements.signinDropdown().click({force: true})
-    }
+        this.elements.signinDropdown().click({ force: true });
+    };
 
     openRegisterPage = () => {
-        this.elements.registerBtn().click({force: true})
-    }
+        this.elements.registerBtn().click({ force: true });
+    };
 }

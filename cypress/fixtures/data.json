@@ -12,7 +12,9 @@
   "existingCustomer": "existing",
   "fullpayOption": "$829.99 one time payment",
   "searchSupportString": "phone not working",
-  "expectedSearchResult": "Quick Cell Phone Repair"
-
+  "expectedSearchResult": "Quick Cell Phone Repair",
+  "searchBusinessSupportString": "Open business account",
+  "expectedBusinessSearchResult": "My Business Account",
+  "expectedMobileDeviceTroubleshootSearchResult": "What is wrong with your Apple iPhone 15?"
 
 }
