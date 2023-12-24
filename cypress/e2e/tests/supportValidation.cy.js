@@ -30,7 +30,7 @@ describe("validate user can get support", () => {
         supportValidation.validateCorrectSearchIsDisplayed(testdata.expectedBusinessSearchResult);
     });
 
-    it.only("validate user can get mobile device troubleshoot support", async () => {
+    it("validate user can get mobile device troubleshoot support", async () => {
         supportValidation.navigateToMobileDeviceSupportPage();
         supportValidation.selectFirstDeviceTroubleShoot();
         supportValidation.validateCorrectSearchIsDisplayed(testdata.expectedMobileDeviceTroubleshootSearchResult);
