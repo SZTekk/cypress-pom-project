@@ -33,7 +33,9 @@ module.exports = defineConfig({
     requestTimeout: 10000,
     defaultCommandTimeout: 10000,
     responseTimeout: 10000,
-    pageLoadTimeout: 30000
+    pageLoadTimeout: 30000,
+    viewportHeight:526,
+    viewportWidth: 1512
   }
 });
 
