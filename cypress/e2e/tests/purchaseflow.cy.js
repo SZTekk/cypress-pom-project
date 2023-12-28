@@ -18,7 +18,10 @@ describe("validate user can purchase an item from verizon", () => {
         });
     });
 
-    it("validate user can purchase Apple Iphone 14 pro", async () => {
+    it.only("validate user can purchase Apple Iphone 15", async () => {
+        purchaseFlowPage.openVerizonShop();
+        purchaseFlowPage.searchAProduct(testdata.searchResultData);
+        purchaseFlowPage.selectProductToPurchase();
         purchaseFlowPage.selectProductToPurchase();
         purchaseFlowPage.selectColor();
         purchaseFlowPage.selectStorageCapacity(testdata.minimumStorage);

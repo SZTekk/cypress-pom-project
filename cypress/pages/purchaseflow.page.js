@@ -2,15 +2,27 @@
 /* eslint-disable no-undef */
 export class PurchaseFlowPage {
     elements = {
-        iphone14pro: () => cy.get("#hero-tile2"),
+        verizonShop: () => cy.get('#gnav20-Shop-L1'),
+        verizonShopAll: () => cy.get("#gnav20-Shop-L2-1"),
+        searchAProduct: () => cy.get("#search_box_ShopLP_input"),
+        selectedProduct: () => cy.get("1_tile"),
         colorOfProduct: () => cy.get("#clr10520005"),
         storageCapacity: (storage) => cy.get(`[aria-label="${storage} GB"]`),
         typeOfCustomer: (customerType) => cy.get(`[aria-label="${customerType}"]`),
         paymentOptions: (payOption) => cy.get(`[aria-label="${payOption}"]`),
     };
 
+    openVerizonShop = () => {
+        this.elements.verizonShop().click({force: true});
+        this.elements.verizonShopAll().click({force: true})
+    };
+
+    searchAProduct = (product) => {
+        this.elements.searchAProduct().type(product)
+    }
+
     selectProductToPurchase = () => {
-        this.elements.iphone14pro().click({ force: true });
+        this.elements.selectedProduct().click({ force: true });
     };
 
     selectColor = () => {
